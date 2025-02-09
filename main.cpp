@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <tuple>
 #include <algorithm>
 #include "puzzle.h"
 using namespace std;
