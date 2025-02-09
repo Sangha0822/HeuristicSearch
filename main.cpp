@@ -23,9 +23,9 @@ int main()
 
     vector<int> initialState = {1,6,7,5,0,3,4,8,2}; 
     Problem p(initialState);
-    p.createQueue(); 
-    p.createHeursticQueue();
-    p.createManhattanQueue();
+    p.initialUniformCost(); 
+    p.initialHeursticQueue();
+    p.initialManhattanQueue();
 
     Node node1 = p.uniformCost();
     printGoalNode(node1);

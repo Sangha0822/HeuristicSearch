@@ -173,7 +173,7 @@ class Problem
     {
         int expendedNode = 0;
 
-        createQueue();
+        initialUniformCost();
         
         while(!tempQ.empty())
         {
@@ -264,7 +264,7 @@ class Problem
     {
         int expendedNode = 0;
 
-        createHeursticQueue();
+        initialHeursticQueue();
 
         while(!tempPrioQueue.empty())
         {
@@ -353,7 +353,7 @@ class Problem
     {
         int expendedNode = 0;
 
-        createManhattanQueue();
+        initialManhattanQueue();
 
         while(!tempPrioManQueue.empty())
         {
@@ -437,19 +437,19 @@ class Problem
         
     }
 
-    void createQueue()
+    void initialUniformCost()
     {
         trackQ.push(root);
         tempQ.push(root);
     };
     
-    void createHeursticQueue()
+    void initialHeursticQueue()
     {
        trackPrioQueue.push(root);
        tempPrioQueue.push(root);
     }
 
-    void createManhattanQueue()
+    void initialManhattanQueue()
     {
         root.manhattan();
         trackPrioManQueue.push(root);
