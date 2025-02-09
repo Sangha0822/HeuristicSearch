@@ -181,10 +181,13 @@ class Problem
             tempQ.pop();
             expendedNode ++;
             
+            printNode(node);
             if(isitGoal(node))
             {
-                cout << "WE FOUND GOAL " << endl;
-                cout << expendedNode << endl;
+                cout << "Goal Found!! " << endl;
+                cout << "Goal Depth: " << node.depth << endl;
+                cout << "Expended Number of Nodes: " << expendedNode << endl;
+                
                 return node;
             }
 
@@ -272,10 +275,12 @@ class Problem
             Node node = tempPrioQueue.top();
             tempPrioQueue.pop();
             expendedNode ++;
+            printNode(node);
             if(isitGoal(node))
             {
-                cout << "WE FOUND GOAL " << endl;
-                cout << expendedNode << endl;
+                cout << "Goal Found!! " << endl;
+                cout << "Goal Depth: " << node.depth << endl;
+                cout << "Expended Number of Nodes: " << expendedNode << endl;
                 return node;
 
             }
@@ -361,10 +366,12 @@ class Problem
             Node node = tempPrioManQueue.top();
             tempPrioManQueue.pop();
             expendedNode ++;
+            printNode(node);
             if(isitGoal(node))
             {
-                cout << "WE FOUND GOAL " << endl;
-                cout << expendedNode << endl;
+                cout << "Goal Found!! " << endl;
+                cout << "Goal Depth: " << node.depth << endl;
+                cout << "Expended Number of Nodes: " << expendedNode << endl;
                 return node;
             }
 
@@ -514,6 +521,19 @@ class Problem
         }
         return true;
     }
+
+    void printNode(Node node) {
+    for (int i = 0; i < 9; i++) 
+    {
+        cout << node.state[i] << " ";
+        if (i % 3 == 2)
+        {
+            cout << endl; 
+        } 
+    }
+    cout << "-----------------" << endl;
+    cout << " Current Depth: " << node.depth << endl;
+}
 
 };
 

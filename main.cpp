@@ -5,18 +5,6 @@
 using namespace std;
 
 
-void printGoalNode(const Node& goalNode) {
-    cout << "Goal Depth: " << goalNode.depth << endl;
-    for (int i = 0; i < 9; i++) 
-    {
-        cout << goalNode.state[i] << " ";
-        if (i % 3 == 2)
-        {
-            cout << endl; 
-        } 
-    }
-    cout << "-----------------" << endl;
-}
 
 int main()
 {
@@ -27,15 +15,12 @@ int main()
     p.initialHeursticQueue();
     p.initialManhattanQueue();
 
-    Node node1 = p.uniformCost();
-    printGoalNode(node1);
+    Node node1 = p.uniformCost(); //Uniform Cost
 
-    Node node2 = p.heurstic();
-    printGoalNode(node2);
+    Node node2 = p.heurstic(); //Missing Tile
 
-    Node node3 = p.manhattan();
-    printGoalNode(node3);
-    
+    Node node3 = p.manhattan(); //Manhattan Distance
+
 
     return 0;
 }
